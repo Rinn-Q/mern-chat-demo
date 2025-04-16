@@ -15,8 +15,7 @@ export const SocketContextProvider = ({ children }) => {
 
 	useEffect(() => {
 		if (authUser) {
-			const socket = io("https://515e-183-177-105-156.ngrok-free.app:8000", {
-				transports: ["websocket"],
+			const socket = io("https://515e-183-177-105-156.ngrok-free.app", {
 				query: {
 					userId: authUser._id,
 				},
